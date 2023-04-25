@@ -242,7 +242,7 @@ If you are having authentication issues, try adding a command to the Dockerfile 
 Example (Linux):
 
 ```Dockerfile
-ENV VSS_NUGET_EXTERNAL_FEED_ENDPOINTS="{`"endpointCredentials`": [{`"endpoint`":`"https://fabrikam.pkgs.visualstudio.com/_packaging/MyGreatFeed/nuget/v3/index.json`", `"username`":`"docker`", `"password`":`"${FEED_ACCESSTOKEN}`"}]}"
+ENV VSS_NUGET_EXTERNAL_FEED_ENDPOINTS="{\"endpointCredentials\": [{\"endpoint\":\"https://fabrikam.pkgs.visualstudio.com/_packaging/MyGreatFeed/nuget/v3/index.json\", \"username\":\"docker\", \"password\":\"$FEED_ACCESSTOKEN\"}]}"
 RUN echo $VSS_NUGET_EXTERNAL_FEED_ENDPOINTS
 ```
 
